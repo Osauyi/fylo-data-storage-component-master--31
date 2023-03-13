@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Fylo data storage component</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: cyan;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="headerBox">
+        <img src="/images/logo.svg" alt="Logo" />
+        <div class="headerBoxIcon">
+          <div class="iconsContainer">
+            <img src="/images/icon-document.svg" alt="folder-icon" />
+          </div>
+          <div class="iconsContainer">
+            <img src="/images/icon-folder.svg" alt="document-ion" />
+          </div>
+          <div class="iconsContainer">
+            <img src="/images/icon-upload.svg" alt="cloud-icon" />
+          </div>
+        </div>
+      </div>
+      <div class="amountYOuUse">
+        <p class="help">
+          You’ve used <span class="Lamount">815 GB</span> of your storage
+        </p>
+
+        <input
+          type="range"
+          min="1"
+          max="1000"
+          value="815"
+          class="slider"
+          id="myRange"
+          oninput="change()"
+        />
+        <div class="itsAmount">
+          <p>0 GB</p>
+          <p>1000 GB</p>
+        </div>
+
+        <div class="amountRemaining">
+          <p><span class="Ramount">185</span> GB Left</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Osauyi</a>.
+      </div>
+    </footer>
+  </body>
+  <script>
+    let input = document.querySelector(".slider");
+    let AmountLeft = document.querySelector(".Ramount");
+    let AmountUsed = document.querySelector(".Lamount");
+
+    function change() {
+      let RealAmountLeft = 1000 - input.value;
+      let RealAmountUsed = 1000 - RealAmountLeft;
+      // console.log(RealAmountLeft);
+      // console.log(RealAmountUsed);
+      AmountUsed.innerHTML = RealAmountUsed + " GB";
+      AmountLeft.innerHTML = RealAmountLeft;
+    }
+  </script>
+</html>
