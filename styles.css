@@ -205,4 +205,8 @@ footer{
 	border: 12px solid;
 	border-color: var(--Pale-Blue) var(--Pale-Blue) transparent transparent;
 }
+
+.amountYOuUse{
+  text-align: left;
+}
 }
