@@ -163,7 +163,7 @@ footer{
     background-image: url(images/bg-desktop.png);
     background-position: bottom;
     background-repeat: no-repeat;
-    background-size: initial;
+    background-size: contain;
   }
   
   main{
